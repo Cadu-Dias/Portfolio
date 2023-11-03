@@ -1,0 +1,25 @@
+/*{
+    "tecnologia": "Angular",
+    "nível": "Advanced",
+    "porcentagem": "0.75"
+}, 
+{
+    "tecnologia": "Git",
+    "nível": "Advanced",
+    "porcentagem": "0.75"
+}, 
+{
+    "tecnologia": "Java",
+    "nível": "Regular",
+    "porcentagem": "0.5"
+}, 
+{
+    "tecnologia": "AWS",
+    "nível": "Regular",
+    "porcentagem": "0.5"
+},
+{
+    "tecnologia": "CiberSecurity",
+    "nível": "Begginer",
+    "porcentagem": "0.25"
+}*/

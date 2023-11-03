@@ -1,0 +1,96 @@
+{
+    "projects":[
+        {
+            "titulo": "Design de Imóvel",
+            "descricao": "Uma loja desenvolvida com CSS, HTML e JavaScript, vender serviços de design para o apartamento ou casa",
+            "image_url": "assets/images/projetoteste.png",
+            "github": "https://github.com/Cadu-Dias"
+        },
+        {
+            "titulo": "Loja de Venda de Movéis",
+            "descricao": "Uma loja desenvolvida com CSS, HTML e JavaScript, para vender produtos a serem colocados na casa",
+            "image_url": "assets/images/projetoteste2.png",
+            "github": "https://github.com/Cadu-Dias"
+        },
+        {
+            "titulo": "Organização de desenvolvimento sustentável",
+            "descricao": "Página criada para uma organização a qual busca conscientizar sobre o aumento de um sociedade sustentável",
+            "image_url": "assets/images/projetoteste3.png",
+            "github": "https://github.com/Cadu-Dias"
+        },
+        {
+            "titulo": "Organização de desenvolvimento sustentável",
+            "descricao": "Página criada para uma organização a qual busca conscientizar sobre o aumento de um sociedade sustentável",
+            "image_url": "assets/images/projetoteste3.png",
+            "github": "https://github.com/Cadu-Dias"
+        }
+    ],
+    "technologies": [
+        {
+            "tecnologia": "HTML, CSS",
+            "nível": "Advanced",
+            "porcentagem": "0.75"
+        }, 
+        {
+            "tecnologia": "JavaScript",
+            "nível": "Regular",
+            "porcentagem": "0.50"
+        }, 
+        {
+            "tecnologia": "Python",
+            "nível": "Advanced",
+            "porcentagem": "0.75"
+        }, 
+        {
+            "tecnologia": "React",
+            "nível": "Advanced",
+            "porcentagem": "0.75"
+        }, 
+        {
+            "tecnologia": "C",
+            "nível": "Regular",
+            "porcentagem": "0.50"
+        } 
+    ],
+    "additional_topics": [
+        {
+            "theme": "Git"
+        },
+        {
+            "theme": "AWS"
+        },
+        {
+            "theme": "Agile Skills"
+        },
+        {
+            "theme": "Github"
+        },
+        {
+            "theme": "Comunicable"
+        },
+        {
+            "theme": "Google Cloud"
+        },
+        {
+            "theme": "XP Programming"
+        }
+    ],
+    "timeline_point": [
+        {
+            "year": "2020",
+            "description": "Durante o período da pandemia houve meu primeiro contato com a programação, mergulhando no mundo da codificação e explorando os conceitos iniciais"
+        },
+        {
+            "year": "2021",
+            "description": "Refinei minhas habilidades de programação e aprofundei meu conhecimento com cursos na Alura, marcando um passo significativo na minha jornada"
+        },
+        {
+            "year": "2022",
+            "description": " Em 2022, dei um grande passo, ingressando no Instituto Mauá de Tecnologia para aprimorar ainda mais minhas habilidades em engenharia e programação"
+        },
+        {
+            "year": "2023 - ...",
+            "description": "Nesse último ano e nos seguintes, continuei e contuinuarei buscando excelência na programação, conquistando marcos significativos e enfrentando desafios empolgantes. A aprendizagem é contínua!"
+        }
+    ]
+}
