@@ -7,7 +7,7 @@ Projeto de Portfolio do Curso de Flutter do Instituto Mauá de Tecnologia
 - Requisito:
     Ter a SDK do Flutter instalado
 
-'''
+```
 git clone https://github.com/Cadu-Dias/Portfolio.git
 flutter run 
-'''
+```
