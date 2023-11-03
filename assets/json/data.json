@@ -19,10 +19,10 @@
             "github": "https://github.com/Cadu-Dias"
         },
         {
-            "titulo": "Organização de desenvolvimento sustentável",
-            "descricao": "Página criada para uma organização a qual busca conscientizar sobre o aumento de um sociedade sustentável",
-            "image_url": "assets/images/projetoteste3.png",
-            "github": "https://github.com/Cadu-Dias"
+            "titulo": "Portfolio",
+            "descricao": "Single Page criada em Flutter como portifólio, a fim de apresentar meus projetos e competências como programador",
+            "image_url": "assets/images/projeto1.png",
+            "github": "https://github.com/Cadu-Dias/Portfolio"
         }
     ],
     "technologies": [

@@ -10,9 +10,9 @@ class FooterSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isCellphone = context.screenSize().width < 500 ? true : false;
+    bool needsToBeColumn = context.screenSize().width < 700 ? true : false;
 
-    if (isCellphone) {
+    if (needsToBeColumn) {
       return Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -132,7 +132,7 @@ class FooterSection extends StatelessWidget {
               ),
             ),
           ],
-          
+
         ),
       ],
     );

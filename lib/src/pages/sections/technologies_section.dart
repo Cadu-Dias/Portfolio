@@ -80,7 +80,7 @@ class _TechnologieSectionState extends State<TechnologieSection> {
         ),
         Wrap(
           alignment: WrapAlignment.start,
-          spacing: 20,
+          spacing: 15,
           runSpacing: 20,
           children: _additionalTechnologiesItems.map((topic) => TopicWidget(title: topic["theme"])).toList()
         ),
