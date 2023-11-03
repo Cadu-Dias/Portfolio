@@ -40,12 +40,12 @@ class TimeLineTileWidget extends StatelessWidget {
           ),
           Container(
             width: isScreenSmall? context.screenSize().width * 0.6 : context.screenSize().width * 0.8,
-            height: 200,
+            height: 180,
             child: Text(
               "$year - $description",
               style: TextStyle(
                   color: Pallete.grey,
-                  fontSize: isScreenSmall? 15: 20,
+                  fontSize: isScreenSmall? 15: 18,
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -61,7 +61,7 @@ class TimeLineTileWidget extends StatelessWidget {
               color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
         ),
         Container(
-          margin: const EdgeInsets.only(top: 20, bottom: 20),
+          margin: const EdgeInsets.only(top: 20, bottom: 15),
           width: 30,
           height: 30,
           decoration: const BoxDecoration(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portifolio/pallete.dart';
 import 'package:portifolio/src/utils/size_screen_util.dart';
-
+import 'package:flutter/foundation.dart' show kIsWeb;
 class ProfileAnimation extends StatefulWidget {
   final double containerWidth;
 
@@ -20,7 +20,7 @@ class _ProfileAnimationState extends State<ProfileAnimation>
   void initState() {
     super.initState();
     _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 2))
+        AnimationController(vsync: this, duration: const Duration(seconds: 2))
           ..repeat(reverse: true);
 
     _animation = Tween(begin: const Offset(0, 0.1), end: const Offset(0, 0.2))
@@ -40,14 +40,14 @@ class _ProfileAnimationState extends State<ProfileAnimation>
       position: _animation,
       child: Container(
         constraints: BoxConstraints(
-          maxWidth: widget.containerWidth - 60, // Largura disponível
+          maxWidth: widget.containerWidth - 120, // Largura disponível
         ),
         child: Stack(
           alignment: Alignment.centerRight,
           children: [
             Container(
-              height: context.screenSize().width < 500 ? 270 : 400,
-              width: context.screenSize().width < 500 ? 270 : 400,
+              height: context.screenSize().width < 500 ? 270 : kIsWeb? 270 : 400,
+              width: context.screenSize().width < 500 ? 270 : kIsWeb? 270 : 400,
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
                     colors: [Pallete.lightPurple, Pallete.aquaBlue]),
@@ -55,8 +55,8 @@ class _ProfileAnimationState extends State<ProfileAnimation>
               ),
             ),
             Container(
-              height: context.screenSize().width < 500 ? 250 : 375,
-              width: context.screenSize().width < 500 ? 250 : 375,
+              height: context.screenSize().width < 500 ? 250 :  kIsWeb? 270 : 375,
+              width: context.screenSize().width < 500 ? 250 :  kIsWeb? 270 : 375,
               decoration: BoxDecoration(
                 image: const DecorationImage(
                   image: AssetImage(

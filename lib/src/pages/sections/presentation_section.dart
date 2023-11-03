@@ -5,7 +5,7 @@ import 'package:portifolio/src/utils/size_screen_util.dart';
 import 'package:portifolio/src/widgets/button_widget.dart';
 import 'package:portifolio/src/widgets/gradient_text.dart';
 import 'package:portifolio/src/widgets/profile_animation.dart';
-
+import 'package:flutter/foundation.dart' show kIsWeb;
 class PresentationSection extends StatefulWidget {
   const PresentationSection({super.key});
 
@@ -18,7 +18,7 @@ class _PresentationSectionState extends State<PresentationSection> {
   Widget build(BuildContext context) {
     double containerWidth = MediaQuery.of(context).size.width < 1000
         ? MediaQuery.of(context).size.width * 0.9
-        : MediaQuery.of(context).size.width * 0.7;
+        : MediaQuery.of(context).size.width * 0.75;
 
     return Column(
       children: [
@@ -33,7 +33,7 @@ class _PresentationSectionState extends State<PresentationSection> {
             alignment: WrapAlignment.spaceBetween,
             children: [
               Container(
-                constraints: const BoxConstraints(minWidth: 100, maxWidth: 840),
+                constraints: const BoxConstraints(minWidth: 100, maxWidth: kIsWeb? 700 : 840),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,

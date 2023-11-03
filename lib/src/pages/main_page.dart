@@ -3,12 +3,10 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:portifolio/src/pages/sections/aboutme_section.dart';
 import 'package:portifolio/src/pages/sections/footer_section.dart';
-
 import 'package:portifolio/src/pages/sections/presentation_section.dart';
 import 'package:portifolio/src/pages/sections/projects_section.dart';
 import 'package:portifolio/src/pages/sections/technologies_section.dart';
 import 'package:portifolio/src/widgets/drawer_widget.dart';
-import 'package:portifolio/src/widgets/gradient_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:reveal_on_scroll/reveal_on_scroll.dart';
 

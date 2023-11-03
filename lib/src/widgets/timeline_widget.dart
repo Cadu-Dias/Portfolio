@@ -39,7 +39,7 @@ class _TimeLineWidgetState extends State<TimeLineWidget> {
 
     return Container(
         constraints:  BoxConstraints(
-            minWidth: 100, maxWidth: 1400, minHeight: 200, maxHeight: needsToBeVertical? 800: 300),
+            minWidth: 100, maxWidth: 1400, minHeight: 200, maxHeight: needsToBeVertical? 780: 300),
         child: isVerticalVeryfication(needsToBeVertical));
   }
 
