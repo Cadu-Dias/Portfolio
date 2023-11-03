@@ -1,5 +1,7 @@
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:portifolio/pallete.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DrawerWidget extends StatelessWidget {
   final GlobalKey projectsKey;
@@ -96,6 +98,52 @@ class DrawerWidget extends StatelessWidget {
               BuildContext contextKey = aboutMeKey.currentContext!;
               await Scrollable.ensureVisible(contextKey,
                   duration: const Duration(milliseconds: 1500));
+            },
+          ),
+          ListTile(
+            leading: const Icon(
+              EvaIcons.linkedin,
+              color: Pallete.white,
+            ),
+            title: const Text(
+              "Linkedin",
+              style: TextStyle(color: Pallete.white),
+            ),
+            onTap: () async {
+             if (!await launchUrl(Uri.parse(
+                  "https://www.linkedin.com/in/cadu-dias-45b596238/"))) {
+                throw Exception(
+                    'Could not launch https://www.linkedin.com/in/cadu-dias-45b596238/');
+              }
+            },
+          ),
+          ListTile(
+            leading: const Icon(
+              EvaIcons.github,
+              color: Pallete.white,
+            ),
+            title: const Text(
+              "Github",
+              style: TextStyle(color: Pallete.white),
+            ),
+            onTap: () async {
+              if (!await launchUrl(Uri.parse("https://github.com/Cadu-Dias"))) {
+                throw Exception(
+                    'Could not launch https://github.com/Cadu-Dias');
+              }
+            },
+          ),
+          ListTile(
+            leading: const Icon(
+              EvaIcons.twitter,
+              color: Pallete.white,
+            ),
+            title: const Text(
+              "Twitter",
+              style: TextStyle(color: Pallete.white),
+            ),
+            onTap: () {
+              
             },
           ),
         ],
