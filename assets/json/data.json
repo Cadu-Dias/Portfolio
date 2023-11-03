@@ -13,10 +13,10 @@
             "github": "https://github.com/Cadu-Dias"
         },
         {
-            "titulo": "Organização de desenvolvimento sustentável",
-            "descricao": "Página criada para uma organização a qual busca conscientizar sobre o aumento de um sociedade sustentável",
-            "image_url": "assets/images/projetoteste3.png",
-            "github": "https://github.com/Cadu-Dias"
+            "titulo": "Buscante",
+            "descricao": "Site feito com Angular e TypeScript, para que possa-se buscar livros presentes na API da Google",
+            "image_url": "assets/images/projeto2.png",
+            "github": "https://github.com/Cadu-Dias/Buscante"
         },
         {
             "titulo": "Portfolio",
