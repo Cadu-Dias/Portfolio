@@ -55,8 +55,8 @@ class _ProfileAnimationState extends State<ProfileAnimation>
               ),
             ),
             Container(
-              height: context.screenSize().width < 500 ? 250 :  kIsWeb? 270 : 375,
-              width: context.screenSize().width < 500 ? 250 :  kIsWeb? 270 : 375,
+              height: context.screenSize().width < 500 ? 250 :  kIsWeb? 250 : 375,
+              width: context.screenSize().width < 500 ? 250 :  kIsWeb? 250 : 375,
               decoration: BoxDecoration(
                 image: const DecorationImage(
                   image: AssetImage(
