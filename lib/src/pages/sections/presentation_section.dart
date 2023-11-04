@@ -16,9 +16,7 @@ class PresentationSection extends StatefulWidget {
 class _PresentationSectionState extends State<PresentationSection> {
   @override
   Widget build(BuildContext context) {
-    double containerWidth = MediaQuery.of(context).size.width < 1000
-        ? MediaQuery.of(context).size.width * 0.9
-        : MediaQuery.of(context).size.width * 0.75;
+    double containerWidth = kIsWeb || context.screenSize().width < 1000? context.screenSize().width * 0.9 : context.screenSize().width * 0.75;
 
     return Column(
       children: [
@@ -33,7 +31,7 @@ class _PresentationSectionState extends State<PresentationSection> {
             alignment: WrapAlignment.spaceBetween,
             children: [
               Container(
-                constraints: const BoxConstraints(minWidth: 100, maxWidth: kIsWeb? 700 : 840),
+                constraints: const BoxConstraints(minWidth: 100, maxWidth: kIsWeb? 650 : 840),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,

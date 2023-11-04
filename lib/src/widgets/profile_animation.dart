@@ -40,7 +40,7 @@ class _ProfileAnimationState extends State<ProfileAnimation>
       position: _animation,
       child: Container(
         constraints: BoxConstraints(
-          maxWidth: widget.containerWidth - 120, // Largura disponível
+          maxWidth: widget.containerWidth , // Largura disponível
         ),
         child: Stack(
           alignment: Alignment.centerRight,
