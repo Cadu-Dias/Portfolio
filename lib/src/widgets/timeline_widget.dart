@@ -49,9 +49,9 @@ class _TimeLineWidgetState extends State<TimeLineWidget> {
       return Stack(
         children: [
           Container(
-            margin: const EdgeInsets.only(top: 38, right: 100, left: 10),
+            margin: const EdgeInsets.only(top: 34, right: 100, left: 10),
             width: 10,
-            height: 600,
+            height: 590,
             decoration: const BoxDecoration(color: Colors.white),
           ),
           Container(
