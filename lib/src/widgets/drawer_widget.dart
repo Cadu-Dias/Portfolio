@@ -29,20 +29,6 @@ class DrawerWidget extends StatelessWidget {
               backgroundImage: AssetImage("assets/images/foto_portifolio.png"),
             ),
           ),
-          ListTile(
-            leading: Icon(
-              Icons.home,
-              color: Pallete.white,
-            ),
-            title: Text(
-              "Início",
-              style: TextStyle(color: Pallete.white),
-            ),
-            onTap: () {
-              // Ação ao clicar em "Início"
-              Navigator.pop(context); // Fecha o Drawer
-            },
-          ),
           GestureDetector(
             onTap: () async {
               BuildContext context = projectsKey.currentContext!;
@@ -55,7 +41,7 @@ class DrawerWidget extends StatelessWidget {
                 color: Pallete.white,
               ),
               title: Text(
-                "Projects",
+                "Projetos",
                 style: TextStyle(color: Pallete.white),
               ),
               onTap: () async {
@@ -73,7 +59,7 @@ class DrawerWidget extends StatelessWidget {
               color: Pallete.white,
             ),
             title: const Text(
-              "Technologies",
+              "Tecnologias",
               style: TextStyle(color: Pallete.white),
             ),
             onTap: () async {
@@ -90,7 +76,7 @@ class DrawerWidget extends StatelessWidget {
               color: Pallete.white,
             ),
             title: const Text(
-              "About Me",
+              "Sobre Mim",
               style: TextStyle(color: Pallete.white),
             ),
             onTap: () async {

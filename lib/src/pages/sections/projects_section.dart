@@ -47,7 +47,7 @@ class _ProjectSectionState extends State<ProjectSection> {
         Align(
           alignment: Alignment.topLeft,
           child: Text(
-            "Projects",
+            "Projetos",
             key: widget.projectsKey,
             style: const TextStyle(
                 color: Pallete.white,

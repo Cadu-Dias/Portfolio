@@ -164,7 +164,7 @@ class MainSinglePageState extends State<MainSinglePage> {
     if (isWideScreen) {
       return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         const Text(
-          "C.M. Portfolio",
+          "C.M. Portfólio",
           style: TextStyle(
             fontSize: 25,
             color: Pallete.white,
@@ -184,7 +184,7 @@ class MainSinglePageState extends State<MainSinglePage> {
 
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
       const Text(
-        "C.M. Portfolio",
+        "C.M. Portfólio",
         style: TextStyle(
           fontSize: 25,
           color: Pallete.white,
@@ -194,13 +194,14 @@ class MainSinglePageState extends State<MainSinglePage> {
       Row(
         children: [
           GestureDetector(
+            
             onTap: () async {
               BuildContext context = projectsKey.currentContext!;
               await Scrollable.ensureVisible(context,
                   duration: const Duration(milliseconds: 1500));
             },
             child: const Text(
-              "Projects",
+              "Projetos",
               style: TextStyle(color: Pallete.white, fontSize: 15),
             ),
           ),
@@ -212,7 +213,7 @@ class MainSinglePageState extends State<MainSinglePage> {
                   duration: const Duration(milliseconds: 1500));
             },
             child: const Text(
-              "Technologies",
+              "Tecnologias",
               style: TextStyle(color: Pallete.white, fontSize: 15),
             ),
           ),
@@ -224,7 +225,7 @@ class MainSinglePageState extends State<MainSinglePage> {
                   duration: const Duration(milliseconds: 1500));
             },
             child: const Text(
-              "About Me",
+              "Sobre Mim",
               style: TextStyle(color: Pallete.white, fontSize: 15),
             ),
           ),

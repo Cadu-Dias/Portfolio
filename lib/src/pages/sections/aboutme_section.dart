@@ -24,7 +24,7 @@ class _AboutMeSectionState extends State<AboutMeSection> {
           
           alignment: Alignment.topLeft,
           child: Text(
-            "About Me",
+            "Sobre mim",
             key: widget.aboutMeKey,
             style: const TextStyle(
                 color: Pallete.white,

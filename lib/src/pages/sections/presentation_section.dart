@@ -37,7 +37,7 @@ class _PresentationSectionState extends State<PresentationSection> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const GradientText(
-                      "Hello, I'm Cadu,",
+                      "Olá, eu sou Cadu,",
                       gradient: LinearGradient(
                           colors: [Pallete.lightPurple, Pallete.aquaBlue]),
                       style:
@@ -46,21 +46,21 @@ class _PresentationSectionState extends State<PresentationSection> {
                     AnimatedTextKit(
                       animatedTexts: [
                         TyperAnimatedText(
-                          "a FullStack Developer",
+                          "um Desenvolvedor FullStack",
                           textStyle: TextStyle(
                               fontSize: 50,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
                         TyperAnimatedText(
-                          "a CiberSecurity",
+                          "um Segurança de Dados",
                           textStyle: TextStyle(
                               fontSize: 50,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
                         TyperAnimatedText(
-                          "a DevOps worker",
+                          "um Trabalhador DevOps",
                           textStyle: TextStyle(
                               fontSize: 50,
                               fontWeight: FontWeight.bold,
@@ -82,7 +82,7 @@ class _PresentationSectionState extends State<PresentationSection> {
                       height: 50,
                     ),
                     ButtonWidget(
-                      textButton: "Download CV",
+                      textButton: "Baixar CV",
                       buttonFunction: () {
                         print("");
                       },

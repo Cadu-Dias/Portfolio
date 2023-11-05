@@ -28,7 +28,7 @@
     "technologies": [
         {
             "tecnologia": "HTML, CSS",
-            "nível": "Advanced",
+            "nível": "Avançado",
             "porcentagem": "0.75"
         }, 
         {
@@ -38,18 +38,23 @@
         }, 
         {
             "tecnologia": "Python",
-            "nível": "Advanced",
+            "nível": "Avançado",
             "porcentagem": "0.75"
         }, 
         {
-            "tecnologia": "React",
-            "nível": "Advanced",
+            "tecnologia": "React, Angular",
+            "nível": "Avançado",
             "porcentagem": "0.75"
         }, 
         {
             "tecnologia": "C",
             "nível": "Regular",
             "porcentagem": "0.50"
+        }, 
+        {
+            "tecnologia": "Java",
+            "nível": "Avançado",
+            "porcentagem": "0.75"
         } 
     ],
     "additional_topics": [
@@ -66,7 +71,7 @@
             "theme": "Github"
         },
         {
-            "theme": "Comunicable"
+            "theme": "Comunicável"
         },
         {
             "theme": "Google Cloud"

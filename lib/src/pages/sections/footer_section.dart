@@ -10,7 +10,7 @@ class FooterSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool needsToBeColumn = context.screenSize().width < 700 ? true : false;
+    bool needsToBeColumn = context.screenSize().width < 800 ? true : false;
 
     if (needsToBeColumn) {
       return Column(
@@ -18,7 +18,7 @@ class FooterSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const GradientText(
-            "Feel free to contact me",
+            "Sinta-se a vontade para me contatar",
             gradient:
                 LinearGradient(colors: [Pallete.lightPurple, Pallete.aquaBlue]),
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -80,7 +80,7 @@ class FooterSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         const GradientText(
-          "Feel free to contact me",
+          "Sinta-se a vontade para me contatar",
           gradient:
               LinearGradient(colors: [Pallete.lightPurple, Pallete.aquaBlue]),
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),

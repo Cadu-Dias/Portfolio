@@ -44,7 +44,7 @@ class _TechnologieSectionState extends State<TechnologieSection> {
         Align(
           alignment: Alignment.topLeft,
           child: Text(
-            "Technologies",
+            "Tecnologias",
             key: widget.technologiesKey,
             style: const TextStyle(
                 color: Pallete.white,
@@ -66,7 +66,7 @@ class _TechnologieSectionState extends State<TechnologieSection> {
         const Align(
           alignment: Alignment.topLeft,
           child: Text(
-            "Additional Technologies and skills",
+            "Ferramentas adicionais e habilidades",
             style: TextStyle(
                 color: Pallete.white,
                 fontWeight: FontWeight.bold,
