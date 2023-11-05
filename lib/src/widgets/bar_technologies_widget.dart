@@ -41,16 +41,19 @@ class _BarWidgetState extends State<BarWidget> {
               ],
             ),
           ),
+        
           const SizedBox(height: 10,),
           LinearPercentIndicator(
             addAutomaticKeepAlive: false,
             clipLinearGradient: true,
-            restartAnimation: true,
+            animateFromLastPercent: true,
+            animation: true,
+            animationDuration: 2500,
+
             lineHeight: 20.0,
             percent: double.parse(widget.barPercent),
             barRadius: const Radius.circular(20),
-            animation: true,
-            animationDuration: 2500,
+            maskFilter:  const MaskFilter.blur(BlurStyle.solid, 500),
             backgroundColor: const Color.fromRGBO(15, 22, 36, 1),
             linearGradient: const LinearGradient(colors: [
               Pallete.lightPurple,

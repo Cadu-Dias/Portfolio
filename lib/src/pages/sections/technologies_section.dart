@@ -1,11 +1,9 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:portifolio/pallete.dart';
 import 'package:portifolio/src/widgets/bar_technologies_widget.dart';
 import 'package:portifolio/src/widgets/topic_widget.dart';
-import 'package:reveal_on_scroll/reveal_on_scroll.dart';
 
 class TechnologieSection extends StatefulWidget {
   final GlobalKey technologiesKey;
