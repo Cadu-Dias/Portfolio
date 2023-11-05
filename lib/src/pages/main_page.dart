@@ -71,19 +71,37 @@ class MainSinglePageState extends State<MainSinglePage> {
       floatingActionButton: AnimatedOpacity(
         duration: const Duration(milliseconds: 200), //show/hide animation
         opacity: showButton ? 1.0 : 0.0, //set obacity to 1 on visible, or hide
-        child: FloatingActionButton(
-          onPressed: () async {
-            scrollController.animateTo(0,
-                duration:
-                    const Duration(milliseconds: 500), //duration of scroll
-                curve: Curves.fastOutSlowIn //scroll type
-                );
-          },
-          backgroundColor: Pallete.lightPurple,
-          shape: CircleBorder(),
-          child: const Icon(
-            Icons.arrow_upward,
-            size: 30,
+        child: Container(
+          decoration: const BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: LinearGradient(colors: [
+              Pallete.lightPurple, Pallete.aquaBlue
+            ]),
+            boxShadow: [
+              BoxShadow(
+                 color: Pallete.lightDarkBlue,
+                    offset: Offset(0, 4),
+                    blurRadius: 8,
+                    spreadRadius: 2
+              )
+            ]
+          ),
+          child: FloatingActionButton(
+            onPressed: () async {
+              scrollController.animateTo(0,
+                  duration:
+                      const Duration(milliseconds: 500), //duration of scroll
+                  curve: Curves.fastOutSlowIn //scroll type
+                  );
+            },
+        
+            backgroundColor: Pallete.transparent,
+            shape: CircleBorder(),
+            child: const Icon(
+              Icons.arrow_upward,
+              size: 30,
+              color: Pallete.white,
+            ),
           ),
         ),
       ),

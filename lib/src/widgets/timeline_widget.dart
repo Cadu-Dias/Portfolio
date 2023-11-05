@@ -1,10 +1,7 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:portifolio/pallete.dart';
 import 'package:portifolio/src/utils/size_screen_util.dart';
-import 'package:portifolio/src/utils/utils.dart';
 import 'package:portifolio/src/widgets/timelinetile_widget.dart';
 
 class TimeLineWidget extends StatefulWidget {
