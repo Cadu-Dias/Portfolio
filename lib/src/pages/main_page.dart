@@ -27,7 +27,9 @@ class MainSinglePageState extends State<MainSinglePage> {
   GlobalKey projectsKey = GlobalKey();
   GlobalKey technologiesKey = GlobalKey();
   GlobalKey aboutMeKey = GlobalKey();
-
+  bool isProjectoHover = false;
+  bool isTechnologiesHover = false;
+  bool isAboutMeHover = false;
   bool showButton = false;
 
   @override
@@ -193,40 +195,75 @@ class MainSinglePageState extends State<MainSinglePage> {
       ),
       Row(
         children: [
-          GestureDetector(
-            
+          InkWell(
+            onHover: (val) {
+              setState(() {
+                isProjectoHover = val;
+              });
+            },
             onTap: () async {
               BuildContext context = projectsKey.currentContext!;
               await Scrollable.ensureVisible(context,
                   duration: const Duration(milliseconds: 1500));
             },
-            child: const Text(
-              "Projetos",
-              style: TextStyle(color: Pallete.white, fontSize: 15),
+            child: Container(
+              decoration: BoxDecoration(
+                border: isProjectoHover? const Border(
+                  bottom: BorderSide(color: Pallete.lightPurple, width: 2),
+                ) : null,
+              ),
+              child: Text(
+                "Projetos",
+                style: TextStyle(color: Pallete.white, fontSize: 15),
+              ),
             ),
           ),
           const SizedBox(width: 80),
-          GestureDetector(
+          InkWell(
+            onHover: (val) {
+              setState(() {
+                isTechnologiesHover = val;
+              });
+            },
             onTap: () async {
               BuildContext context = technologiesKey.currentContext!;
               await Scrollable.ensureVisible(context,
                   duration: const Duration(milliseconds: 1500));
             },
-            child: const Text(
-              "Tecnologias",
-              style: TextStyle(color: Pallete.white, fontSize: 15),
+            child: Container(
+              decoration: BoxDecoration(
+                border: isTechnologiesHover? const Border(
+                  bottom: BorderSide(color: Pallete.lightPurple, width: 2),
+                ) : null,
+              ),
+              child: const Text(
+                "Tecnologias",
+                style: TextStyle(color: Pallete.white, fontSize: 15),
+              ),
             ),
           ),
           const SizedBox(width: 80),
-          GestureDetector(
+          InkWell(
+            onHover: (val) {
+              setState(() {
+                isAboutMeHover = val;
+              });
+            },
             onTap: () async {
               BuildContext context = aboutMeKey.currentContext!;
               await Scrollable.ensureVisible(context,
                   duration: const Duration(milliseconds: 1500));
             },
-            child: const Text(
-              "Sobre Mim",
-              style: TextStyle(color: Pallete.white, fontSize: 15),
+            child: Container(
+              decoration: BoxDecoration(
+                border: isAboutMeHover? const Border(
+                  bottom: BorderSide(color: Pallete.lightPurple, width: 2),
+                ) : null,
+              ),
+              child: const Text(
+                "Sobre Mim",
+                style: TextStyle(color: Pallete.white, fontSize: 15),
+              ),
             ),
           ),
         ],
