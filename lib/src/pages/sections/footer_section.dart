@@ -42,7 +42,7 @@ class _FooterSectionState extends State<FooterSection > {
                 isEmailHover = val;
               });
             },
-            onTap: openGmail,
+            onTap: Utility.openGmail,
             child: Container(
               decoration:BoxDecoration(
                 border: isEmailHover? const Border(
