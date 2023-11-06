@@ -1,6 +1,7 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:portifolio/pallete.dart';
+import 'package:portifolio/src/utils/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DrawerWidget extends StatelessWidget {
@@ -24,7 +25,7 @@ class DrawerWidget extends StatelessWidget {
           const UserAccountsDrawerHeader(
             decoration: BoxDecoration(color: Pallete.backgroundColor),
             accountName: Text("Nome: Cadu Dias Procópio Machado"),
-            accountEmail: Text("E-mail: cadubas1@gmail.com"),
+            accountEmail: InkWell(onTap: Utility.openGmail, child: Text("E-mail: cadubas1@gmail.com")),
             currentAccountPicture: CircleAvatar(
               backgroundImage: AssetImage("assets/images/foto_portifolio.png"),
             ),
@@ -136,4 +137,5 @@ class DrawerWidget extends StatelessWidget {
       ),
     );
   }
+  
 }

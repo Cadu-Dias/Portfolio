@@ -12,6 +12,7 @@ class TopicWidget extends StatelessWidget {
     return Container(
       constraints: BoxConstraints(minWidth: context.screenSize().width < 600? 50: 100, maxWidth: context.screenSize().width < 600? 200: 400),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
             width: 15,

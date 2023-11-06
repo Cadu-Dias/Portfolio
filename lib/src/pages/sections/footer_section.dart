@@ -2,11 +2,21 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:portifolio/pallete.dart';
 import 'package:portifolio/src/utils/size_screen_util.dart';
+import 'package:portifolio/src/utils/utils.dart';
 import 'package:portifolio/src/widgets/gradient_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class FooterSection extends StatelessWidget {
-  const FooterSection({super.key});
+
+class FooterSection extends StatefulWidget {
+  const FooterSection ({super.key});
+
+  @override
+  State<FooterSection> createState() => _FooterSectionState();
+}
+
+class _FooterSectionState extends State<FooterSection > {
+
+  bool isEmailHover = false;
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +36,26 @@ class FooterSection extends StatelessWidget {
           const SizedBox(
             height: 5,
           ),
-          const Text("cadubas1@gmail.com",
-              style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Pallete.white)),
+          InkWell(
+            onHover: (val) {
+              setState(() {
+                isEmailHover = val;
+              });
+            },
+            onTap: openGmail,
+            child: Container(
+              decoration:BoxDecoration(
+                border: isEmailHover? const Border(
+                  bottom: BorderSide(color: Pallete.lightPurple, width: 2),
+                ) : null,
+              ), 
+              child: const Text("cadubas1@gmail.com",
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Pallete.white)),
+            ),
+          ),
           const SizedBox(
             height: 5,
           ),
@@ -85,11 +110,26 @@ class FooterSection extends StatelessWidget {
               LinearGradient(colors: [Pallete.lightPurple, Pallete.aquaBlue]),
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
-        const Text("cadubas1@gmail.com",
-            style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: Pallete.white)),
+         InkWell(
+            onHover: (val) {
+              setState(() {
+                isEmailHover = val;
+              });
+            },
+            onTap: Utility.openGmail,
+            child: Container(
+              decoration:BoxDecoration(
+                border: isEmailHover? const Border(
+                  bottom: BorderSide(color: Pallete.lightPurple, width: 2),
+                ) : null,
+              ), 
+              child: const Text("cadubas1@gmail.com",
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Pallete.white)),
+            ),
+          ),
         const Text("Telegram @Cadu-Dias",
             style: TextStyle(
                 fontSize: 18,
