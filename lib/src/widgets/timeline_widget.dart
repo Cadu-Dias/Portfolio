@@ -1,7 +1,6 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:portifolio/src/utils/size_screen_util.dart';
+import 'package:portifolio/src/utils/utils.dart';
 import 'package:portifolio/src/widgets/timelinetile_widget.dart';
 
 class TimeLineWidget extends StatefulWidget {
@@ -15,9 +14,7 @@ class _TimeLineWidgetState extends State<TimeLineWidget> {
 
   List _timeLinesPointList = [];
   Future<void> readJSON() async {
-    final String response =
-        await rootBundle.loadString('assets/json/data.json');
-    final data = await json.decode(response);
+    final data = await Utility.geraJson();
     setState(() {
       _timeLinesPointList = data["timeline_point"];
     });

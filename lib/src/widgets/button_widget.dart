@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portifolio/pallete.dart';
 
+// ignore: must_be_immutable
 class ButtonWidget extends StatelessWidget {
   final String textButton;
   Function()? buttonFunction;

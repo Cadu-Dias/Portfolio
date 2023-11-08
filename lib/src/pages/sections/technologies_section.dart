@@ -1,7 +1,6 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:portifolio/pallete.dart';
+import 'package:portifolio/src/utils/utils.dart';
 import 'package:portifolio/src/widgets/bar_technologies_widget.dart';
 import 'package:portifolio/src/widgets/topic_widget.dart';
 
@@ -28,9 +27,7 @@ class _TechnologieSectionState extends State<TechnologieSection> {
   }
 
   Future<void> readJSON() async {
-    final String response =
-        await rootBundle.loadString('assets/json/data.json');
-    final data = await json.decode(response);
+    final data = await Utility.geraJson();
     setState(() {
       _technologiesItems = data["technologies"];
       _additionalTechnologiesItems = data["additional_topics"];

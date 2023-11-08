@@ -1,12 +1,9 @@
-import 'dart:convert';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:portifolio/pallete.dart';
 import 'package:portifolio/src/utils/size_screen_util.dart';
+import 'package:portifolio/src/utils/utils.dart';
 import 'package:portifolio/src/widgets/project_widget.dart';
-import 'package:reveal_on_scroll/reveal_on_scroll.dart';
 
 class ProjectSection extends StatefulWidget {
   final GlobalKey projectsKey;
@@ -29,9 +26,8 @@ class _ProjectSectionState extends State<ProjectSection> {
   }
 
   Future<void> readJSON() async {
-    final String response =
-        await rootBundle.loadString('assets/json/data.json');
-    final data = await json.decode(response);
+    
+    final data = await Utility.geraJson();
     setState(() {
       _projectItems = data["projects"];
     });
@@ -99,7 +95,7 @@ class _ProjectSectionState extends State<ProjectSection> {
                 Container(
                   height: 13,
                   width: 13,
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       gradient: currentIndex == i
                           ? const LinearGradient(
