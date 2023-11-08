@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portifolio/pallete.dart';
 import 'package:portifolio/src/utils/size_screen_util.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+
 class ProfileAnimation extends StatefulWidget {
   final double containerWidth;
 
@@ -40,14 +41,26 @@ class _ProfileAnimationState extends State<ProfileAnimation>
       position: _animation,
       child: Container(
         constraints: BoxConstraints(
-          maxWidth: widget.containerWidth , // Largura disponível
+          maxWidth: widget.containerWidth, // Largura disponível
         ),
         child: Stack(
           alignment: Alignment.centerRight,
           children: [
             Container(
-              height: context.screenSize().width < 500 ? 270 : kIsWeb? 270 : 400,
-              width: context.screenSize().width < 500 ? 270 : kIsWeb? 270 : 400,
+              height: context.screenSize().width < 500
+                  ? 270
+                  : kIsWeb
+                      ? context.screenSize().width > 1200
+                          ? 400
+                          : 270
+                      : 400,
+              width: context.screenSize().width < 500
+                  ? 270
+                  : kIsWeb
+                      ? context.screenSize().width > 1200
+                          ? 400
+                          : 270
+                      : 400,
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
                     colors: [Pallete.lightPurple, Pallete.aquaBlue]),
@@ -55,8 +68,20 @@ class _ProfileAnimationState extends State<ProfileAnimation>
               ),
             ),
             Container(
-              height: context.screenSize().width < 500 ? 250 :  kIsWeb? 250 : 375,
-              width: context.screenSize().width < 500 ? 250 :  kIsWeb? 250 : 375,
+              height: context.screenSize().width < 500
+                  ? 250
+                  : kIsWeb
+                      ? context.screenSize().width > 1200
+                          ? 375
+                          : 250
+                      : 375,
+              width: context.screenSize().width < 500
+                  ? 250
+                  : kIsWeb
+                      ? context.screenSize().width > 1200
+                          ? 375
+                          : 250
+                      : 375,
               decoration: BoxDecoration(
                 image: const DecorationImage(
                   image: AssetImage(
