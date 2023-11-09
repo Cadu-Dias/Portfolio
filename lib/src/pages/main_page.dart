@@ -139,6 +139,7 @@ class MainSinglePageState extends State<MainSinglePage> {
                     animationType: AnimationType.findInRight,
                     child: TechnologieSection(
                       technologiesKey: technologiesKey,
+                      containerWidth: containerWidth,
                     ),
                   ),
                   ScrollToReveal.withAnimation(

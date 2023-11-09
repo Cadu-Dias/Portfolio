@@ -27,7 +27,7 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="portfolio_icon.png"/>
 
   <title>portifolio</title>
   <link rel="manifest" href="manifest.json">
@@ -54,6 +54,29 @@
         }
       });
     });
+  </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCxzsBtRlbIKZWpSyW6XhkGaoTFYwuSGrE",
+      authDomain: "teste3-d725e.firebaseapp.com",
+      projectId: "teste3-d725e",
+      storageBucket: "teste3-d725e.appspot.com",
+      messagingSenderId: "759140474181",
+      appId: "1:759140474181:web:39df0dad3c1037b655322c",
+      measurementId: "G-D96FN09ETX"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
   </script>
 </body>
 </html>

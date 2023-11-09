@@ -6,10 +6,10 @@ import 'package:portifolio/src/widgets/topic_widget.dart';
 
 class TechnologieSection extends StatefulWidget {
   final GlobalKey technologiesKey;
-
+  final double containerWidth;
   const TechnologieSection({
     super.key,
-    required this.technologiesKey,
+    required this.technologiesKey, required this.containerWidth,
   });
 
   @override
@@ -54,7 +54,8 @@ class _TechnologieSectionState extends State<TechnologieSection> {
               .map((tecnologia) => BarWidget(
                   technologieName: tecnologia["tecnologia"],
                   proficiency: tecnologia["nível"],
-                  barPercent: tecnologia["porcentagem"]))
+                  barPercent: tecnologia["porcentagem"],
+                  containerWidth: widget.containerWidth))
               .toList(),
         ),
         const SizedBox(

@@ -50,14 +50,14 @@ class _ProfileAnimationState extends State<ProfileAnimation>
               height: context.screenSize().width < 500
                   ? 270
                   : kIsWeb
-                      ? context.screenSize().width > 1200
+                      ? context.screenSize().width > 2000
                           ? 400
                           : 270
                       : 400,
               width: context.screenSize().width < 500
                   ? 270
                   : kIsWeb
-                      ? context.screenSize().width > 1200
+                      ? context.screenSize().width > 2000
                           ? 400
                           : 270
                       : 400,
@@ -71,14 +71,14 @@ class _ProfileAnimationState extends State<ProfileAnimation>
               height: context.screenSize().width < 500
                   ? 250
                   : kIsWeb
-                      ? context.screenSize().width > 1200
+                      ? context.screenSize().width > 2000
                           ? 375
                           : 250
                       : 375,
               width: context.screenSize().width < 500
                   ? 250
                   : kIsWeb
-                      ? context.screenSize().width > 1200
+                      ? context.screenSize().width > 2000
                           ? 375
                           : 250
                       : 375,
