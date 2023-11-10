@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portifolio/pallete.dart';
@@ -90,7 +92,9 @@ class _PresentationSectionState extends State<PresentationSection> {
                     ButtonWidget(
                       textButton: "Baixar CV",
                       buttonFunction: () {
-                        print("");
+                        AnchorElement anchorElement = AnchorElement(href: "assets/pdfs/CV_Template.pdf");
+                        anchorElement.download = "Currícolo_Cadu Dias";
+                        anchorElement.click();
                       },
                     ),
                   ],
