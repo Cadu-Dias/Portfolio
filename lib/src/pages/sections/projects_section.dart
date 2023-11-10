@@ -72,7 +72,8 @@ class _ProjectSectionState extends State<ProjectSection> {
                       projectTitle: projeto["titulo"],
                       projectDescription: projeto["descricao"],
                       projectImageURL: projeto["image_url"],
-                      projectGithub: projeto["github"]))
+                      projectGithub: projeto["github"],
+                      projectLink: projeto["link"],))
                   .toList(),
               options: CarouselOptions(
                 height: 540,
@@ -126,7 +127,8 @@ class _ProjectSectionState extends State<ProjectSection> {
                 projectTitle: projeto["titulo"],
                 projectDescription: projeto["descricao"],
                 projectImageURL: projeto["image_url"],
-                projectGithub: projeto["github"]))
+                projectGithub: projeto["github"],
+                projectLink: projeto["link"],))
             .toList());
   }
 }

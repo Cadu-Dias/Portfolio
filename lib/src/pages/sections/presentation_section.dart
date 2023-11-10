@@ -57,7 +57,7 @@ class _PresentationSectionState extends State<PresentationSection> {
                                 color: Colors.white),
                           ),
                           TyperAnimatedText(
-                            "um Segurança de Dados",
+                            "um Analista de Segurança",
                             textStyle: TextStyle(
                                 fontSize: 50,
                                 fontWeight: FontWeight.bold,

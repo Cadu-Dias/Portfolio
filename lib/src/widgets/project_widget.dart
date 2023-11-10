@@ -9,12 +9,15 @@ class ProjectWidget extends StatefulWidget {
   final String projectDescription;
   final String projectImageURL;
   final String projectGithub;
+  final String projectLink;
   const ProjectWidget(
       {super.key,
       required this.projectTitle,
       required this.projectDescription,
       required this.projectImageURL,
-      required this.projectGithub});
+      required this.projectGithub,
+      required this.projectLink
+      });
 
   @override
   State<ProjectWidget> createState() => _ProjectWidgetState();
@@ -25,7 +28,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
   Widget build(BuildContext context) {
     // ignore: no_leading_underscores_for_local_identifiers
     final Uri _url = Uri.parse(widget.projectGithub);
-
+    final Uri _projectUrl = Uri.parse(widget.projectLink);
     return Container(
       margin: context.screenSize().width < 600? const EdgeInsets.only(left: 20, right: 20) : null,
       constraints:  BoxConstraints(
@@ -87,8 +90,10 @@ class _ProjectWidgetState extends State<ProjectWidget> {
             children: [
               ButtonWidget(
                 textButton: "  Live Preview  ",
-                buttonFunction: () {
-                  print("a");
+                buttonFunction: () async {
+                  if (!await launchUrl(_projectUrl)) {
+                        throw Exception('Could not launch $_url');
+                      }
                 },
               ),
               SizedBox(

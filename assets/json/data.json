@@ -1,28 +1,32 @@
 {
     "projects":[
         {
-            "titulo": "Design de Imóvel",
-            "descricao": "Uma loja desenvolvida com CSS, HTML e JavaScript, vender serviços de design para o apartamento ou casa",
-            "image_url": "assets/images/projetoteste.png",
-            "github": "https://github.com/Cadu-Dias"
+            "titulo": "Findly",
+            "descricao": "Projeto criado com HTML, CSS e JavaScript puro, a fim de simular um site de perguntas e respostas",
+            "image_url": "assets/images/projeto4.png",
+            "github": "https://github.com/Cadu-Dias/Findly",
+            "link": "https://github.com/Cadu-Dias/Findly"
         },
         {
-            "titulo": "Loja de Venda de Movéis",
-            "descricao": "Uma loja desenvolvida com CSS, HTML e JavaScript, para vender produtos a serem colocados na casa",
-            "image_url": "assets/images/projetoteste2.png",
-            "github": "https://github.com/Cadu-Dias"
+            "titulo": "Organo",
+            "descricao": "Projeto criado com React para simular um site de criação de times, para cada área no mundo da programação",
+            "image_url": "assets/images/projeto3.png",
+            "github": "https://github.com/Cadu-Dias/React_Organo",
+            "link": "https://react-organo-git-main-cadub.vercel.app"
         },
         {
             "titulo": "Buscante",
             "descricao": "Site feito com Angular e TypeScript, para que possa-se buscar livros presentes na API da Google",
             "image_url": "assets/images/projeto2.png",
-            "github": "https://github.com/Cadu-Dias/Buscante"
+            "github": "https://github.com/Cadu-Dias/Buscante",
+            "link" : "https://buscante-livros.web.app"
         },
         {
             "titulo": "Portfolio",
             "descricao": "Single Page criada em Flutter como portifólio, a fim de apresentar meus projetos e competências como programador",
             "image_url": "assets/images/projeto1.png",
-            "github": "https://github.com/Cadu-Dias/Portfolio"
+            "github": "https://github.com/Cadu-Dias/Portfolio",
+            "link": "https://portfolio-cadu.web.app"
         }
     ],
     "technologies": [
@@ -55,7 +59,12 @@
             "tecnologia": "Java",
             "nível": "Avançado",
             "porcentagem": "0.75"
-        } 
+        },
+        {
+            "tecnologia": "Excel",
+            "nível": "Regular",
+            "porcentagem": "0.50"
+        }
     ],
     "additional_topics": [
         {
