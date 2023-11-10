@@ -17,7 +17,9 @@ class _PresentationSectionState extends State<PresentationSection> {
   @override
   Widget build(BuildContext context) {
     double containerWidth = kIsWeb || context.screenSize().width < 1000? context.screenSize().width * 0.9 : context.screenSize().width * 0.75;
-
+    bool needHeight = context.screenSize().width < 650? true: false;
+    bool isCellphone =  context.screenSize().width < 500? true: false;
+    bool isSmaller = context.screenSize().width < 335? true: false;
     return Column(
       children: [
         SizedBox(
@@ -43,33 +45,37 @@ class _PresentationSectionState extends State<PresentationSection> {
                       style:
                           TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
                     ),
-                    AnimatedTextKit(
-                      animatedTexts: [
-                        TyperAnimatedText(
-                          "um Desenvolvedor FullStack",
-                          textStyle: TextStyle(
-                              fontSize: 50,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
-                        TyperAnimatedText(
-                          "um Segurança de Dados",
-                          textStyle: TextStyle(
-                              fontSize: 50,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
-                        TyperAnimatedText(
-                          "um Trabalhador DevOps",
-                          textStyle: TextStyle(
-                              fontSize: 50,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
-                      ],
-                      pause: const Duration(milliseconds: 1000),
-                      displayFullTextOnTap: true,
-                      stopPauseOnTap: true,
+                    Container(
+                      height: needHeight? isCellphone? isSmaller? 280: 225: 150 : null,
+                      child: AnimatedTextKit(
+                        animatedTexts: [
+                          TyperAnimatedText(
+                            "um Desenvolvedor FullStack",
+                            textStyle: TextStyle(
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          TyperAnimatedText(
+                            "um Segurança de Dados",
+                            textStyle: TextStyle(
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          TyperAnimatedText(
+                            "um Trabalhador DevOps",
+                            textStyle: TextStyle(
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                        ],
+                        pause: const Duration(milliseconds: 1000),
+                        displayFullTextOnTap: true,
+                        stopPauseOnTap: true,
+                        
+                      ),
                     ),
                     const SizedBox(
                       height: 50,
