@@ -31,7 +31,7 @@ class MainSinglePageState extends State<MainSinglePage> {
   bool isTechnologiesHover = false;
   bool isAboutMeHover = false;
   bool showButton = false;
-
+  
   @override
   void initState() {
     scrollController.addListener(() {
@@ -120,41 +120,7 @@ class MainSinglePageState extends State<MainSinglePage> {
           child: Center(
             child: SizedBox(
               width: containerWidth,
-              child: Column(
-                children: [
-                  Padding(
-                      padding: const EdgeInsets.only(top: 20, bottom: 10),
-                      child: inserirDrawer(isWideScreen, scaffoldKey)),
-                  const PresentationSection(),
-                  ScrollToReveal.withAnimation(
-                      label: "Projects Section",
-                      reflectPosition: -100,
-                      scrollController: scrollController,
-                      animationType: AnimationType.findInRight,
-                      child: ProjectSection(projectsKey: projectsKey)),
-                  ScrollToReveal.withAnimation(
-                    label: "Technologies Section",
-                    reflectPosition: -150,
-                    scrollController: scrollController,
-                    animationType: AnimationType.findInRight,
-                    child: TechnologieSection(
-                      technologiesKey: technologiesKey,
-                      containerWidth: containerWidth,
-                    ),
-                  ),
-                  ScrollToReveal.withAnimation(
-                    label: "AboutMe Section",
-                    reflectPosition: -80,
-                    scrollController: scrollController,
-                    animationType: AnimationType.findInRight,
-                    child: AboutMeSection(
-                      aboutMeKey: aboutMeKey,
-                    ),
-                  ),
-                  const FooterSection(),
-                  const SizedBox(height: 20,)
-                ],
-              ),
+              child: removeAnimation(isWideScreen, containerWidth)
             ),
           ),
         ),
@@ -307,5 +273,59 @@ class MainSinglePageState extends State<MainSinglePage> {
         ],
       ),
     ]);
+  }
+
+  Widget removeAnimation(bool isWideScreen, double containerWidth) {
+    if(isWideScreen) {
+      return Column(
+        children: [
+           Padding(
+                      padding: const EdgeInsets.only(top: 20, bottom: 10),
+                      child: inserirDrawer(isWideScreen, scaffoldKey)),
+            const PresentationSection(),
+            ProjectSection(projectsKey: projectsKey),
+            TechnologieSection(technologiesKey: technologiesKey, containerWidth: containerWidth),
+            AboutMeSection(aboutMeKey: aboutMeKey),
+            const FooterSection()
+              
+        ],
+      );
+    }
+
+    return Column(
+                children: [
+                  Padding(
+                      padding: const EdgeInsets.only(top: 20, bottom: 10),
+                      child: inserirDrawer(isWideScreen, scaffoldKey)),
+                  const PresentationSection(),
+                  ScrollToReveal.withAnimation(
+                      label: "Projects Section",
+                      reflectPosition: -100,
+                      scrollController: scrollController,
+                      animationType: AnimationType.findInRight,
+                      child: ProjectSection(projectsKey: projectsKey)),
+                  ScrollToReveal.withAnimation(
+                    label: "Technologies Section",
+                    reflectPosition: -150,
+                    scrollController: scrollController,
+                    animationType: AnimationType.findInRight,
+                    child: TechnologieSection(
+                      technologiesKey: technologiesKey,
+                      containerWidth: containerWidth,
+                    ),
+                  ),
+                  ScrollToReveal.withAnimation(
+                    label: "AboutMe Section",
+                    reflectPosition: -80,
+                    scrollController: scrollController,
+                    animationType: AnimationType.findInRight,
+                    child: AboutMeSection(
+                      aboutMeKey: aboutMeKey,
+                    ),
+                  ),
+                  const FooterSection(),
+                  const SizedBox(height: 20,)
+                ],
+              );
   }
 }
