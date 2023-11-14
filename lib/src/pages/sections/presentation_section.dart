@@ -1,5 +1,6 @@
-import 'dart:html';
-
+import 'dart:typed_data';
+import 'dart:html' as html;
+import 'dart:typed_data';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portifolio/pallete.dart';
@@ -8,6 +9,8 @@ import 'package:portifolio/src/widgets/button_widget.dart';
 import 'package:portifolio/src/widgets/gradient_text.dart';
 import 'package:portifolio/src/widgets/profile_animation.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:universal_html/html.dart';
 class PresentationSection extends StatefulWidget {
   const PresentationSection({super.key});
 
@@ -91,10 +94,17 @@ class _PresentationSectionState extends State<PresentationSection> {
                     ),
                     ButtonWidget(
                       textButton: "Baixar CV",
-                      buttonFunction: () {
-                        AnchorElement anchorElement = AnchorElement(href: "assets/pdfs/CV_Template.pdf");
-                        anchorElement.download = "Currícolo_Cadu Dias";
-                        anchorElement.click();
+                      buttonFunction: () async {
+                        final ByteData data = await rootBundle.load('assets/pdfs/cv_template.pdf');
+                        final Uint8List bytes = data.buffer.asUint8List();
+                        final Blob pdfBlob = html.Blob([bytes]);
+                        final String url = html.Url.createObjectUrlFromBlob(pdfBlob);
+                        final AnchorElement anchor = AnchorElement(href: url)
+                           ..target = 'webpdf'
+                           ..download = 'curriculo_cadu_dias.pdf'
+                            ..click();
+
+                        html.Url.revokeObjectUrl(url);
                       },
                     ),
                   ],
