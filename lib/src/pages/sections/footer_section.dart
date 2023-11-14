@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:portifolio/pallete.dart';
 import 'package:portifolio/src/utils/size_screen_util.dart';
 import 'package:portifolio/src/utils/utils.dart';
-import 'package:portifolio/src/widgets/gradient_text.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -27,10 +27,10 @@ class _FooterSectionState extends State<FooterSection > {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const GradientText(
+          GradientText(
             "Sinta-se a vontade para me contatar",
-            gradient:
-                LinearGradient(colors: [Pallete.lightPurple, Pallete.aquaBlue]),
+            colors:
+                const [Pallete.lightPurple, Pallete.aquaBlue],
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
@@ -104,12 +104,12 @@ class _FooterSectionState extends State<FooterSection > {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const GradientText(
-          "Sinta-se a vontade para me contatar",
-          gradient:
-              LinearGradient(colors: [Pallete.lightPurple, Pallete.aquaBlue]),
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-        ),
+        GradientText(
+            "Sinta-se a vontade para me contatar",
+            colors:
+                const [Pallete.lightPurple, Pallete.aquaBlue],
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
          InkWell(
             onHover: (val) {
               setState(() {

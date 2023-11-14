@@ -1,12 +1,11 @@
 import 'dart:typed_data';
 import 'dart:html' as html;
-import 'dart:typed_data';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:flutter/material.dart';
 import 'package:portifolio/pallete.dart';
 import 'package:portifolio/src/utils/size_screen_util.dart';
 import 'package:portifolio/src/widgets/button_widget.dart';
-import 'package:portifolio/src/widgets/gradient_text.dart';
 import 'package:portifolio/src/widgets/profile_animation.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/services.dart' show rootBundle;
@@ -43,12 +42,15 @@ class _PresentationSectionState extends State<PresentationSection> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const GradientText(
-                      "Olá, eu sou Cadu,",
-                      gradient: LinearGradient(
-                          colors: [Pallete.lightPurple, Pallete.aquaBlue]),
-                      style:
-                          TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+                    GradientText(
+                      'Olá, eu sou Cadu,',
+                      style: const TextStyle(
+                        fontSize:50.0, fontWeight: FontWeight.bold
+                      ),
+                      colors: const [
+                      Pallete.lightPurple,
+                      Pallete.aquaBlue,
+                     ],
                     ),
                     Container(
                       height: needHeight? isCellphone? isSmaller? 280: 225: 150 : null,
@@ -56,21 +58,21 @@ class _PresentationSectionState extends State<PresentationSection> {
                         animatedTexts: [
                           TyperAnimatedText(
                             "um Desenvolvedor FullStack",
-                            textStyle: TextStyle(
+                            textStyle: const TextStyle(
                                 fontSize: 50,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),
                           TyperAnimatedText(
                             "um Analista de Segurança",
-                            textStyle: TextStyle(
+                            textStyle: const TextStyle(
                                 fontSize: 50,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),
                           TyperAnimatedText(
                             "um Trabalhador DevOps",
-                            textStyle: TextStyle(
+                            textStyle: const TextStyle(
                                 fontSize: 50,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
